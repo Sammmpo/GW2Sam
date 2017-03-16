@@ -32,6 +32,10 @@ var quickAchies = {
   "Daily Orr Forager" : true,
   "Daily Orr Vista Viewer" : true,
 
+  "Daily Fractal" : true,
+  "Daily WvW Land Claimer" : true,
+  "Daily Master of Monuments" : true,
+
   "Daily PvP Reward Earner" : true,
   "Daily WvW Big Spender" : true,
   "Daily Mystic Forger" : true,
@@ -39,13 +43,6 @@ var quickAchies = {
 };
 
 
-
-
-
-var achiesTime = {
-  "Daily Kryta Lumberer" : 3,
-  "Daily WvW Big Spender" : 1
-};
 
 
 fetch('https://api.guildwars2.com/v2/achievements/daily')
