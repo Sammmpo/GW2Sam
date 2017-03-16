@@ -73,6 +73,10 @@ fetch('https://api.guildwars2.com/v2/achievements/daily')
               quickList.innerHTML += (achievements[0].name)+"<br>";
             }
 
+            if (0 == "Daily Fractal"){ // disabled.
+              fractal.classList.remove("hidden");
+            }
+
           });
         }
         // pve.innerHTML += dailies.pve[i].id + "<br>";
@@ -108,7 +112,7 @@ fetch('https://api.guildwars2.com/v2/achievements/daily')
     // wvw.innerHTML += (dailies.wvw[i].id)+"<br>";
     }
 
-    /*
+/*
     for (i=0; i<dailies.fractals.length; i++){
       fetch('https://api.guildwars2.com/v2/achievements?ids='+dailies.fractals[i].id)
       .then(function(response) {
@@ -122,7 +126,7 @@ fetch('https://api.guildwars2.com/v2/achievements/daily')
       });
     // fractals.innerHTML += (dailies.fractals[i].id)+"<br>";
     }
-    */
+*/
 
 
 })
