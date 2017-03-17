@@ -22,6 +22,11 @@ var quickAchies = {
   "Daily Maguuma Jungle Forager" : true,
   "Daily Maguuma Jungle Vista Viewer" : true,
 
+  "Daily Heart of Maguuma Lumberer" : true,
+  "Daily Heart of Maguuma Miner" : true,
+  "Daily Heart of Maguuma Forager" : true,
+  "Daily Heart of Maguuma Vista Viewer" : true,
+
   "Daily Maguuma Wastes Lumberer" : true,
   "Daily Maguuma Wastes Miner" : true,
   "Daily Maguuma Wastes Forager" : true,
@@ -60,7 +65,7 @@ fetch('https://api.guildwars2.com/v2/achievements/daily')
 
 
     for (i=0; i<dailies.pve.length; i++){
-      if (dailies.pve[i].required_access[0] == "HeartOfThorns" || dailies.pve[i].required_access[1] == "HeartOfThorns"){
+      if ((dailies.pve[i].required_access[0] == "HeartOfThorns" || dailies.pve[i].required_access[1] == "HeartOfThorns") && dailies.pve[i].level.max == 80){
         fetch('https://api.guildwars2.com/v2/achievements?ids='+dailies.pve[i].id)
         .then(function(response) {
             return response.json();
